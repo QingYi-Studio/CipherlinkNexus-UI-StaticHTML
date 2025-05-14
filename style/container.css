@@ -1,17 +1,10 @@
 body {
-    background-color: aliceblue;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
 }
 
 #container {
-    display: flex; /* 启用flex布局 */
+    position: relative;
     min-height: 100vh;
-}
-
-/* 确保基础样式优先级 */
-.page {
-    display: none !important;
-}
-
-.page.active {
-    display: block !important;
 }

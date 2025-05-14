@@ -1,62 +1,51 @@
-/* 侧边导航菜单 */
+/* 侧边栏基础样式 */
 .sidebar {
-    margin: 0;
-    padding: 0;
-    width: 200px;
-    background-color: #f1f1f1;
     position: fixed;
-    height: 100%;
-    overflow: auto;
-}
-
-/* 侧边栏链接 */
-.sidebar a {
-    display: block;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
-}
-
-/* 活动/当前链接 */
-.sidebar a.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-/* 鼠标悬停链接 */
-.sidebar a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-}
-
-/* 页面内容 */
-div.content {
-    margin-left: 200px;
+    width: 15%;
+    height: 100vh;
+    background: #f8f9fa;
     padding: 20px;
-    min-height: 100vh;
+    transition: transform 0.3s ease;
+    z-index: 1000;
 }
 
-/* 在宽度小于 700px 的屏幕上，将侧边栏变成顶部栏 */
-/* @media screen and (max-width: 700px) {
+/* 移动端样式 */
+@media (max-width: 768px) {
     .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
+        width: 250px;
+        transform: translateX(-100%);
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
     }
 
-    .sidebar a {
-        float: left;
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1100;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
     }
 
-    div.content {
-        margin-left: 0;
+    .menu-toggle.active {
+        left: 270px;
     }
-} */
+}
 
-/* 在小于 400px 的屏幕上，垂直显示栏，而不是水平显示 */
-/* @media screen and (max-width: 400px) {
-    .sidebar a {
-        text-align: center;
-        float: none;
+/* 桌面端样式 */
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
     }
-} */
+
+    #main-content {
+        margin-left: 15%;
+    }
+}
