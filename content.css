@@ -1,0 +1,16 @@
+#content {
+    margin-left: 200px; /* 与侧边栏宽度一致 */
+    height: 100vh;
+    padding: 20px;
+    display: block; /* 覆盖可能的flex设置 */
+}
+
+/* 为每个页面内容添加独立居中 */
+.page {
+    max-width: 800px; /* 控制内容区域最大宽度 */
+    margin: 0 auto; /* 水平居中 */
+    height: 100%;
+    display: flex !important; /* 覆盖基础样式 */
+    flex-direction: column;
+    justify-content: center; /* 垂直居中 */
+}
