@@ -6,3 +6,12 @@ body {
     display: flex; /* 启用flex布局 */
     min-height: 100vh;
 }
+
+/* 确保基础样式优先级 */
+.page {
+    display: none !important;
+}
+
+.page.active {
+    display: block !important;
+}
