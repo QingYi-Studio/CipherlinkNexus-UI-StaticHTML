@@ -1,6 +1,6 @@
 // 路由和侧边栏控制逻辑
 document.addEventListener('DOMContentLoaded', () => {
-    const routes = ['home', 'server', 'client', 'about'];
+    const routes = ['home', 'server', 'client', 'config', 'about'];
     const sidebar = document.querySelector('.sidebar');
     const menuToggle = document.querySelector('.menu-toggle');
 

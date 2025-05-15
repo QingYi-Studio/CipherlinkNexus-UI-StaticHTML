@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,26 +9,30 @@
     <link rel="stylesheet" href="./style/sidebar.css">
     <link rel="stylesheet" href="./style/content.css">
     <link rel="stylesheet" href="./style/copyright.css">
+    <link rel="stylesheet" href="./style/page.css">
     <script src="./script/main.js" defer></script>
 </head>
+
 <body>
     <!-- 汉堡菜单按钮 -->
     <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-    
+
     <div id="container">
         <!-- 侧边栏 -->
         <aside class="sidebar">
             <a href="#home">Home</a>
             <a href="#server">Server</a>
             <a href="#client">Client</a>
+            <a href="#config">Configuration</a>
             <a href="#about">About</a>
         </aside>
 
         <!-- 主内容 -->
         <main id="main-content">
             <div id="Home" class="page active">
-                <h2>Welcome to Cipherlink Nexus</h2>
+                <h2 class="title">Cipherlink Nexus</h2>
                 <p>Your one-stop solution for secure communication.</p>
+                <p>Due to government crackdowns, this software does not provide official communication groups or official servers.</p>
             </div>
 
             <div id="Server" class="page">
@@ -36,15 +41,20 @@
             </div>
 
             <div id="Client" class="page">
-                <h2>Client Setup</h2>
+                <h2 class="title">Client Setup</h2>
                 <p>Client configuration details</p>
             </div>
 
+            <div id="Config" class="page">
+                <h2 class="title">Configuration</h2>
+            </div>
+
             <div id="About" class="page">
-                <h2>About Our Project</h2>
+                <h2 class="title">About Our Project</h2>
                 <p>Secure communication solution since 2025</p>
             </div>
         </main>
     </div>
 </body>
+
 </html>
