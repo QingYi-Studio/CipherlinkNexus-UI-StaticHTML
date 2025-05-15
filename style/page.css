@@ -1,0 +1,65 @@
+#Server #messageInput {
+    width: 70%;
+    height: 50%;
+    resize: none;
+    flex: 1;
+    flex-basis: auto;
+}
+
+#Server #messageOutput {
+    width: 70%;
+    height: 50%;
+    resize: none;
+    flex: 1;
+    flex-basis: auto;
+}
+
+/* Send Button */
+.page .sendBtn {
+    position: relative; /* 父元素设置为相对定位 */
+    width: 10%;
+    margin: 5px;
+    padding: 0;
+    text-align: center;
+    float: right;
+    margin-right: 26em;
+    flex: 1;
+    border: none;
+    border-radius: 13em;
+    background: linear-gradient(to right, #46e94c, #8BC34A);
+    flex-basis: auto;
+    cursor: pointer;
+    overflow: hidden; /* 防止伪元素溢出 */
+    transition: background 0.3s ease;
+}
+
+.page .sendBtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #dfeddf, #d4dace);
+    opacity: 0; /* 初始状态透明 */
+    transition: opacity 0.3s ease; /* 透明度过渡效果 */
+}
+
+.page .sendBtn:hover::before {
+    opacity: 1; /* 悬停时变为不透明 */
+}
+
+.page .sendBtn p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.4em;
+    height: 1.7em;
+    color: darkblue;
+    display: grid;
+    place-items: center;
+    position: relative; /* 相对定位，确保文字在上层 */
+    z-index: 1; /* 确保文字在背景之上 */
+    border-radius: inherit; /* 继承外层的圆角 */
+    background: transparent; /* 内层背景透明 */
+    transition: color 0.3s ease; /* 文字颜色过渡效果 */
+}
