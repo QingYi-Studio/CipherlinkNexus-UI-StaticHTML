@@ -4,7 +4,7 @@
     resize: none;
     flex: 1;
     flex-basis: auto;
-    margin-top: 2em;
+    margin-top: 0.2em;
 }
 
 #Server #messageOutput {
@@ -13,6 +13,11 @@
     resize: none;
     flex: 1;
     flex-basis: auto;
+}
+
+#Server hr {
+    width: 70%;
+    margin-right: 30%;
 }
 
 /* Send Button */
