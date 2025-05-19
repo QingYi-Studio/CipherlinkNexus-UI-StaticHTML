@@ -33,16 +33,25 @@
             <div id="Home" class="page active">
                 <h2 class="title">Cipherlink Nexus</h2>
                 <p>Your one-stop solution for secure communication.</p>
-                <p>Due to government crackdowns, this software does not provide official communication groups or official servers.</p>
+                <p>Due to government crackdowns, this software does not provide official communication groups or
+                    official servers.</p>
             </div>
 
             <div id="Server" class="page">
-                <h2 class="title">Server</h2>
-                <textarea id="messageOutput" rows="20"></textarea>
-                <hr>
-                <textarea id="messageInput" placeholder="Message" rows="10"></textarea>
-                <br>
-                <button class="sendBtn"><p>Send</p></button>
+                <div id="Content">
+                    <h2 class="title">Server</h2>
+                    <textarea id="messageOutput" rows="20" readonly></textarea>
+                    <hr>
+                    <textarea id="messageInput" placeholder="Message" rows="10"></textarea>
+                    <br>
+                    <button class="sendBtn">
+                        <p>Send</p>
+                    </button>
+                </div>
+                <div id="Status" class="serverStatus">
+                    <h3>Status</h3>
+                    <p>IP:&nbsp;<span>{IP.Address}</span></p>
+                </div>
             </div>
 
             <div id="Client" class="page">
