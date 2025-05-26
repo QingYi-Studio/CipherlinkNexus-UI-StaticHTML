@@ -1,14 +1,14 @@
-#Server {
+.page {
     /* 清除浮动 */
     overflow: auto;
 }
 
-#Server #Content {
+.page #Content {
     float: left;
     width: 65%;
 }
 
-#Server #Content #messageInput {
+.page #Content #messageInput {
     width: 100%;
     height: 50%;
     resize: none;
@@ -18,7 +18,7 @@
     transition: all 0.15s ease;
 }
 
-#Server #Content #messageOutput {
+.page #Content #messageOutput {
     width: 100%;
     height: 50%;
     resize: none;
@@ -28,13 +28,13 @@
 }
 
 /* 分割线 */
-#Server #Content hr {
+.page #Content hr {
     width: 100%;
     margin-right: 30%;
     transition: all 0.15s ease;
 }
 
-#Server #Status {
+.page #Status {
     float: right;
     width: 30%;
 }
@@ -99,26 +99,26 @@
 
 /* 移动端样式 */
 @media (max-width: 768px) {
-    #Server #Content {
+    .page #Content {
         float: none;
         width: 90%;
     }
 
-    #Server #Content #messageInput {
+    .page #Content #messageInput {
         width: 100%;
     }
 
-    #Server #Content #messageOutput {
+    .page #Content #messageOutput {
         width: 100%;
     }
 
     /* 分割线 */
-    #Server #Content hr {
+    .page #Content hr {
         width: 100%;
         margin-right: 30%;
     }
 
-    #Status {
+    .page #Status {
         display: none;
     }
 

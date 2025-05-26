@@ -35,6 +35,7 @@
                 <p>Your one-stop solution for secure communication.</p>
                 <p>Due to government crackdowns, this software does not provide official communication groups or
                     official servers.</p>
+                <p>If you have some great features, you can open an issue on this repository.</p>
             </div>
 
             <div id="Server" class="page">
@@ -61,8 +62,24 @@
             </div>
 
             <div id="Client" class="page">
-                <h2 class="title">Client</h2>
-                <p>Client configuration details</p>
+                <div id="Content">
+                    <h2 class="title">Client</h2>
+                    <textarea id="messageOutput" rows="20" readonly></textarea>
+                    <hr>
+                    <textarea id="messageInput" placeholder="Message" rows="10"></textarea>
+                    <br>
+                    <button class="sendBtn">
+                        <p>Send</p>
+                    </button>
+                </div>
+                <div id="Status" class="serverStatus">
+                    <h3>Information</h3>
+                    <p><span class="name">Server status</span>:&nbsp;<span class="serverStatus">{Status}</span></p>
+                    <p><span class="name">Remote IP</span>:&nbsp;<span class="remoteIP">{IP}</span></p>
+                    <p><span class="name">Remote port</span>:&nbsp;<span class="remotePort">{Port}</span></p>
+                    <p><span class="name">Remote status</span>:&nbsp;<span class="remotePort">{Status}</span></p>
+                    <button>Remote test</button>
+                </div>
             </div>
 
             <div id="Config" class="page">
