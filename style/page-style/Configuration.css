@@ -1,0 +1,21 @@
+#Config input {
+    /* width: 25%; */
+    height: 2%;
+    overflow: hidden;
+    resize: none;
+}
+
+#Config .configSection {
+    margin: 0.5em 0.5em;
+    padding: 0.5em;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    width: 40%;
+    float: left;
+    height: auto;
+    text-align: left;
+}
+
+#Config .configSection .configForm .submitBtn{
+    margin-top: 0.5em;
+}

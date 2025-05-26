@@ -11,6 +11,56 @@
     <link rel="stylesheet" href="./style/copyright.css">
     <link rel="stylesheet" href="./style/page.css">
     <script src="./script/main.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 配置表单提交事件
+            const configForm = document.getElementById('serverConfigForm');
+            configForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // 阻止表单默认提交行为
+
+                // 获取表单数据
+                const serverIP = document.getElementById('serverIP').value;
+                const serverPort = document.getElementById('serverPort').value;
+
+                alert("Server IP: " + serverIP + "\nServer Port: " + serverPort);
+
+                // 调用C#方法
+                window.bound.ReceiveData(serverIP, parseInt(serverPort));
+                alert(serverIP + ":" + serverPort + " saved successfully!");
+            });
+
+            // 客户端配置表单提交事件
+            const clientConfigForm = document.getElementById('clientConfigForm');
+            clientConfigForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // 阻止表单默认提交行为
+
+                // 获取表单数据
+                const remoteIP = document.getElementById('remoteIP').value;
+                const remotePort = document.getElementById('remotePort').value;
+
+                alert("Remote IP: " + remoteIP + "\nRemote Port: " + remotePort);
+
+                // 调用C#方法
+                window.bound.ReceiveClientData(remoteIP, parseInt(remotePort));
+                alert(remoteIP + ":" + remotePort + " saved successfully!");
+            });
+
+            // 加密配置表单提交事件
+            const cryptoForm = document.getElementById('cryptoForm');
+            cryptoForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // 阻止表单默认提交行为
+
+                // 获取表单数据
+                const cryptoKey = document.getElementById('cryptoKey').value;
+
+                alert("Crypto Key: " + cryptoKey);
+
+                // 调用C#方法
+                window.bound.ReceiveCryptoData(cryptoKey);
+                alert("Crypto Key saved successfully!");
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -88,7 +138,36 @@
             <!-- 修改设置页面 -->
             <div id="Config" class="page">
                 <h2 class="title">Configuration</h2>
-                <button>Save</button>
+                <div class="configSection">
+                    <form id="serverConfigForm" class="configForm">
+                        <label for="serverIP">Server IP:</label>
+                        <input type="text" id="serverIP" name="serverIP" value="" max="65536" required>
+                        <br>
+                        <label for="serverPort">Server Port:</label>
+                        <input type="number" id="serverPort" name="serverPort" value="" max="65536" required>
+                        <br>
+                        <button type="submit" class="submitBtn">Save</button>
+                    </form>
+                </div>
+                <div class="configSection">
+                    <form id="clientConfigForm" class="configForm">
+                        <label for="remoteIP">Remote IP:</label>
+                        <input type="text" id="remoteIP" name="remoteIP" value="" required>
+                        <br>
+                        <label for="remotePort">Remote Port:</label>
+                        <input type="number" id="remotePort" name="remotePort" value="" required>
+                        <br>
+                        <button type="submit" class="submitBtn">Save</button>
+                    </form>
+                </div>
+                <div class="configSection">
+                    <form id="cryptoForm" class="configForm">
+                        <label for="cryptoKey">Crypto Key:</label>
+                        <input type="text" id="cryptoKey" name="cryptoKey" value="" required>
+                        <br>
+                        <button type="submit" class="submitBtn">Save</button>
+                    </form>
+                </div>
             </div>
 
             <!-- 关于页面 -->
