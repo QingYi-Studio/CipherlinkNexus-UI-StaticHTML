@@ -1,0 +1,129 @@
+.page {
+    /* 清除浮动 */
+    overflow: auto;
+}
+
+.page #Content {
+    float: left;
+    width: 65%;
+}
+
+.page #Content #messageInput {
+    width: 100%;
+    height: 50%;
+    resize: none;
+    flex: 1;
+    flex-basis: auto;
+    margin-top: 0.2em;
+    transition: all 0.15s ease;
+}
+
+.page #Content #messageOutput {
+    width: 100%;
+    height: 50%;
+    resize: none;
+    flex: 1;
+    flex-basis: auto;
+    transition: all 0.15s ease;
+}
+
+/* 分割线 */
+.page #Content hr {
+    width: 100%;
+    margin-right: 30%;
+    transition: all 0.15s ease;
+}
+
+.page #Status {
+    float: right;
+    width: 30%;
+}
+
+/* Send Button */
+.page #Content .sendBtn {
+    position: relative;
+    width: 15%;
+    margin: 5px;
+    padding: 0;
+    text-align: center;
+    float: right;
+    /* margin-right: 30%; */
+    flex: 1;
+    border: none;
+    border-radius: 13em;
+    background: linear-gradient(to right, #46e94c, #8BC34A);
+    flex-basis: auto;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.15s ease;
+}
+
+.page #Content .sendBtn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #dfeddf, #d4dace);
+    opacity: 0;
+    /* 初始状态透明 */
+    transition: opacity 0.3s ease;
+    /* 透明度过渡效果 */
+}
+
+.page #Content .sendBtn:hover::before {
+    opacity: 1;
+    /* 悬停时变为不透明 */
+}
+
+.page #Content .sendBtn p {
+    margin: 0;
+    padding: 0;
+    font-size: 1.4em;
+    height: 1.7em;
+    color: darkblue;
+    display: grid;
+    place-items: center;
+    position: relative;
+    /* 相对定位，确保文字在上层 */
+    z-index: 1;
+    /* 确保文字在背景之上 */
+    border-radius: inherit;
+    /* 继承外层的圆角 */
+    background: transparent;
+    /* 内层背景透明 */
+    transition: color 0.3s ease;
+    /* 文字颜色过渡效果 */
+}
+
+/* 移动端样式 */
+@media (max-width: 768px) {
+    .page #Content {
+        float: none;
+        width: 90%;
+    }
+
+    .page #Content #messageInput {
+        width: 100%;
+    }
+
+    .page #Content #messageOutput {
+        width: 100%;
+    }
+
+    /* 分割线 */
+    .page #Content hr {
+        width: 100%;
+        margin-right: 30%;
+    }
+
+    .page #Status {
+        display: none;
+    }
+
+    .page #Content .sendBtn {
+        width: 5em;
+        margin-right: 0%;
+    }
+}

@@ -28,8 +28,9 @@
             <a href="#about">About</a>
         </aside>
 
-        <!-- 主内容 -->
+        <!-- 主内容部分 -->
         <main id="main-content">
+            <!-- 主页内容 -->
             <div id="Home" class="page active">
                 <h2 class="title">Cipherlink Nexus</h2>
                 <p>Your one-stop solution for secure communication.</p>
@@ -38,6 +39,7 @@
                 <p>If you have some great features, you can open an issue on this repository.</p>
             </div>
 
+            <!-- 服务端页面 -->
             <div id="Server" class="page">
                 <div id="Content">
                     <h2 class="title">Server</h2>
@@ -45,7 +47,7 @@
                     <hr>
                     <textarea id="messageInput" placeholder="Message" rows="10"></textarea>
                     <br>
-                    <button class="sendBtn">
+                    <button class="sendBtn" id="serverSendBtn">
                         <p>Send</p>
                     </button>
                 </div>
@@ -61,6 +63,7 @@
                 </div>
             </div>
 
+            <!-- 客户端页面 -->
             <div id="Client" class="page">
                 <div id="Content">
                     <h2 class="title">Client</h2>
@@ -68,7 +71,7 @@
                     <hr>
                     <textarea id="messageInput" placeholder="Message" rows="10"></textarea>
                     <br>
-                    <button class="sendBtn">
+                    <button class="sendBtn" id="clientSendBtn">
                         <p>Send</p>
                     </button>
                 </div>
@@ -82,10 +85,13 @@
                 </div>
             </div>
 
+            <!-- 修改设置页面 -->
             <div id="Config" class="page">
                 <h2 class="title">Configuration</h2>
+                <button>Save</button>
             </div>
 
+            <!-- 关于页面 -->
             <div id="About" class="page">
                 <h2 class="title">About Our Project</h2>
                 <p>Secure communication solution since 2025</p>
